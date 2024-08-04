@@ -1,0 +1,23 @@
+main:
+  - title: "Blog"
+    url: /blogs/
+  - title: "About"
+    url: /about/
+  - title: "Infra"
+    url: /infra/jekyll
+
+infra:
+  - title: Web
+    children:
+      - title: "How to start jekyll"
+        url: /infra/jekyll
+
+  - title: Linux
+    children:
+      - title: "Sample"
+        url: /linux/sample/
+
+  - title: Security
+    children:
+      - title: "Sample2"
+        url: /security/sample2/
