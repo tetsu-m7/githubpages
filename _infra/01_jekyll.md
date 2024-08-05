@@ -112,10 +112,9 @@ gem "github-pages", group: :jekyll_plugins
 gem "jekyll-include-cache", group: :jekyll_plugins
 Add jekyll-include-cache to the plugins array of your _config.yml.
 {% endhighlight %}
-
-2. Fetch and update bundled gems by running the following Bundler command:
+1. Fetch and update bundled gems by running the following Bundler command:
 bundle
-3. Add remote_theme: "mmistakes/minimal-mistakes@4.26.2" to your _config.yml file. Remove any other theme: or remote_theme: entry.
+1. Add remote_theme: "mmistakes/minimal-mistakes@4.26.2" to your _config.yml file. Remove any other theme: or remote_theme: entry.
 
 
 
