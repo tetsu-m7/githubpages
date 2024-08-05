@@ -39,7 +39,6 @@ cd githubpages
 * _config.yml の編集
   * 下記URLからコピペしてくる  
 [_config.yml](https://github.com/mmistakes/minimal-mistakes/blob/master/_config.yml)
-  * なぜかTheme 部分がコメントアウトされているのでコメントインする
 * index.html の編集
 下記にする  
 [index.html](https://github.com/mmistakes/minimal-mistakes/blob/master/index.html)
@@ -101,6 +100,22 @@ infra:
         url: /security/sample2/
 {% endhighlight %}
 
+### Githubpages への対応
+下記参考に。  
+[remote theme method](https://github.com/mmistakes/minimal-mistakes?tab=readme-ov-file#remote-theme-method)
+
+1. Create/replace the contents of your Gemfile with the following:
+{% highlight bash %}
+source "https://rubygems.org"
+
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-include-cache", group: :jekyll_plugins
+Add jekyll-include-cache to the plugins array of your _config.yml.
+{% endhighlight %}
+
+2. Fetch and update bundled gems by running the following Bundler command:
+bundle
+3. Add remote_theme: "mmistakes/minimal-mistakes@4.26.2" to your _config.yml file. Remove any other theme: or remote_theme: entry.
 
 
 
