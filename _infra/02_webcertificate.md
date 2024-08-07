@@ -33,6 +33,6 @@ openssl x509 -text < server.crt
 ## その他
 
 * 昔は証明書にEV とか色々ランクがあって、いいものだとブラウザが緑色になってよかったねとかがあったのだけど、最近ないなぁと思って調べてみた
-* 下記の記事が詳しいが、結論としては緑色バーにしてみたけども、偽造することができるしブラウザの領域を無駄に使うしこの機能意味ないのでは？ということ  
-[Google Chrome EV表示の終焉](https://jovi0608.hatenablog.com/entry/2019/08/12/095854)  
-[TLSとWeb～URLブラウザの表示のいまとこれからバーの表示はどうなるのか～](https://www.nic.ad.jp/sc-sendai/program/iwsc-sendai-d2-5.pdf)
+* 下記の記事が詳しいが、結論としては緑色バーにしてみたけども、偽造することができるしブラウザの領域を無駄に使うしこの機能意味ないのでは？ということ
+  * [Google Chrome EV表示の終焉](https://jovi0608.hatenablog.com/entry/2019/08/12/095854)  
+  * [TLSとWeb～URLブラウザの表示のいまとこれからバーの表示はどうなるのか～](https://www.nic.ad.jp/sc-sendai/program/iwsc-sendai-d2-5.pdf)
