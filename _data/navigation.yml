@@ -11,6 +11,8 @@ infra:
     children:
       - title: "How to start jekyll"
         url: /infra/jekyll
+      - title: "Web Certification"
+        url: /infra/certificate
 
   - title: Linux
     children:
