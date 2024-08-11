@@ -1,7 +1,7 @@
 ---
 permalink: /infra/rundeck
 layout: single
-title: "Apache Certificate"
+title: "Rundeck"
 ---
 
 ## 環境の前提
