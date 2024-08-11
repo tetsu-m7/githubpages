@@ -17,7 +17,7 @@ infra:
   - title: Linux
     children:
       - title: "Rundeck"
-        url: /linux/rundeck
+        url: /infra/rundeck
 
   - title: Windows
     children:
