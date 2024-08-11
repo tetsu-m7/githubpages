@@ -19,6 +19,11 @@ infra:
       - title: "Sample"
         url: /linux/sample/
 
+  - title: Windows
+    children:
+      - title: "Powershell Tips"
+        url: /infra/powershell/
+
   - title: Security
     children:
       - title: "Sample2"
