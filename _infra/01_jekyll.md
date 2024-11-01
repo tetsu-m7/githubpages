@@ -42,7 +42,7 @@ cd githubpages
 * index.html の編集
 下記にする  
 [index.html](https://github.com/mmistakes/minimal-mistakes/blob/master/index.html)
-* デフォルトで作成される_post配下のエントリのLayoutを single に帰る
+* デフォルトで作成される_post配下のエントリのLayoutを single に変える
 * about.md を削除
 * ある程度できたらjekyll serve コマンドでローカルホストで起動し状況確認
 
@@ -116,6 +116,39 @@ Add jekyll-include-cache to the plugins array of your _config.yml.
 bundle
 1. Add remote_theme: "mmistakes/minimal-mistakes@4.26.2" to your _config.yml file. Remove any other theme: or remote_theme: entry.
 
+### jekyll serveでテストしたいとき
+* webrick をInstall
+{% highlight bash %}
+bundle add webrick
+{% endhighlight %}
+* bundle exec jekyll serve
+
+### 右側の余白がいらないので修正する
+
+* _config ファイルに下記追加
+{% highlight yaml %}
+    values:
+      layout: single
+      classes: wide
+{% endhighlight %}
+
+* font を変える。assets/css/main.scss に下記を追記
+{% highlight css %}
+---
+# Jekyll front matter block
+---
+
+@import "minimal-mistakes"; 
+
+body {
+    margin: 0;
+    font-size: 0.75em;
+}
+{% endhighlight %}
+  * _config のPlungin セクションに下記追加
+{% highlight yaml %}
+  - jekyll-sass-converter
+{% endhighlight %}
 
 
 

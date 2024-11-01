@@ -1,0 +1,10 @@
+---
+# Jekyll front matter block (必要)
+---
+
+@import "minimal-mistakes"; // minimal-mistakesのデフォルトスタイルを読み込む
+
+body {
+    margin: 0; // ボディのマージンをゼロに
+    font-size: 0.75em;
+}

@@ -23,8 +23,10 @@ infra:
     children:
       - title: "Powershell Tips"
         url: /infra/powershell
+      - title: "Windows Client"
+        url: /infra/windowsclient
 
   - title: Security
     children:
-      - title: "Sample2"
-        url: /security/sample2/
+      - title: "Post Quantum Cryptgraphy"
+        url: /infra/postquantum
