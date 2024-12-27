@@ -11,9 +11,7 @@ title: "Windows 11のバックアップ方針"
 
 ## やり方
 
-* Onedrive はWindows Client をインストール時に基本入っている。
-そのためOneDrive に最初に必要なスクリプト類や情報のポイント先を入れておくのがベターである。
-* 下記で対応をしてみたが、winget コマンドがなぜか繋がらずうまくいかなくて断念
+* PowerToys で境界線のないマウスを入れたうえで情報連携すると比較的簡単
 * Chocolatey をインストール
 {% highlight powershell %}
 Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
@@ -22,10 +20,10 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 {% highlight powershell %}
 choco install Boxstarter
 {% endhighlight %}
-* Boxstarter で設定を実施
+* 設定ファイルを事前にDesktop かどこかにおいておく。その後Boxstartershell を実行し、コマンドで設定を実施
 {% highlight powershell %}
 BOXSTARTERSHELL
-Install-BoxstarterPackage -PackageName {file path}
+Install-BoxstarterPackage -PackageName {setting file path}
 {% endhighlight %}
 * Boxstarter の設定は下記
 {% highlight powershell %}
@@ -37,14 +35,12 @@ Disable-UAC
 
 #--- Windows Settings ---
 Disable-GameBarTips
-Disable-InternetExplorerESC
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions
-Set-TaskbarOptions -Size Small -Dock Bottom -Combine Full -Lock
-Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name NavPaneShowAllFolders -Value 1 # all file show
+Set-ItemProperty -Path HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced -Name HideFileExt -Value 0 # all file show
 
 #--- Wingetによるアプリインストール ---
 # wingetをPowerShellから呼び出してアプリをインストール
-$packageListPath = "packages.txt" 
+$packageListPath = "C:\Users\xxxx\Desktop\package.txt" 
 Get-Content $packageListPath | ForEach-Object {
     # 各行のパッケージIDでwingetを呼び出してインストール
     Invoke-Expression "winget install --id $_ -e --silent" 
@@ -57,13 +53,20 @@ Install-ChocolateyPinnedTaskBarItem "$env:windir\system32\mstsc.exe"
 Enable-UAC
 Enable-MicrosoftUpdate
 Install-WindowsUpdate -acceptEula
+
 {% endhighlight %}
 
 その他細々系
 * Ctrl2Cap  
 [Ctrl2Cap](https://learn.microsoft.com/en-us/sysinternals/downloads/ctrl2cap)
-* Google IME のKeymap 変更  
-Keymap.txt をExport しておいておくのでこれをImportする
+* Windows HomeはRDP接続ができないのでChrome remote desktop を入れておく
 * WinAuth のデータ移行
   * Export 機能があるのでデータをExport して移行する
-* データ復元系
+* [alt-ime-ahk](https://github.com/karakaram/alt-ime-ahk)
+* Client 証明書をNASからいれる
+* Powershell で wsl --install を叩く
+* Boxstarter Chocolate の削除：下記ディレクトリの削除
+C:\ProgramData\chocolatey
+C:\ProgramData\ChocolateyHttpCache
+C:\ProgramData\Boxstarter
+* mkdir linux_home on C:\ then vim /etc/passwd to change linux_home
