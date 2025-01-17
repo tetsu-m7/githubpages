@@ -66,7 +66,7 @@ Install-WindowsUpdate -acceptEula
 * Client 証明書をNASからいれる
 * Powershell で wsl --install を叩く
 * Boxstarter Chocolate の削除：下記ディレクトリの削除
-C:\ProgramData\chocolatey
-C:\ProgramData\ChocolateyHttpCache
-C:\ProgramData\Boxstarter
+C:\ProgramData\chocolatey   
+C:\ProgramData\ChocolateyHttpCache   
+C:\ProgramData\Boxstarter   
 * mkdir linux_home on C:\ then vim /etc/passwd to change linux_home

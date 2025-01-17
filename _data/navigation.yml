@@ -30,3 +30,8 @@ infra:
     children:
       - title: "Post Quantum Cryptgraphy"
         url: /infra/postquantum
+  
+  - title: Cloud
+    children:
+      - title: "Terraform"
+        url: /infra/terraform
