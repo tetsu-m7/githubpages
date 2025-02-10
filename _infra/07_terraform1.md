@@ -1,7 +1,7 @@
 ---
-permalink: /infra/terraform
+permalink: /infra/terraform1
 layout: single
-title: "Terraform"
+title: "Terraform 1"
 ---
 
 # はじめに

@@ -33,5 +33,7 @@ infra:
   
   - title: Cloud
     children:
-      - title: "Terraform"
-        url: /infra/terraform
+      - title: "Terraform1"
+        url: /infra/terraform1
+      - title: "Terraform2"
+        url: /infra/terraform2
