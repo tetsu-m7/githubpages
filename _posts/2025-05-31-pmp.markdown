@@ -9,7 +9,7 @@ PMP の資格取得のために勉強を始めたので備忘録として何を�
 
 # PMP Exam Prep Seminar - Complete Exam Coverage with 35 PDUs
 
-https://www.udemy.com/course/pmp-pmbok6-35-pdus/
+* [PMP Exam Prep Seminar - Complete Exam Coverage with 35 PDUs](https://www.udemy.com/course/pmp-pmbok6-35-pdus/)
 
 研修が必要ということで、Udemy で購入。  
 一通り試験合格にFocus して教えてくれますが35 hours 分あるということで相当長いです。  
