@@ -1,0 +1,33 @@
+---
+layout: single
+title:  "PMP(Project Management Professional) 勉強方法"
+---
+
+# はじめに
+
+PMP の資格取得のために勉強を始めたので備忘録として何を利用しているか書きます。  
+
+# PMP Exam Prep Seminar - Complete Exam Coverage with 35 PDUs
+
+https://www.udemy.com/course/pmp-pmbok6-35-pdus/
+
+研修が必要ということで、Udemy で購入。  
+一通り試験合格にFocus して教えてくれますが35 hours 分あるということで相当長いです。  
+完了するにはかなりの今期が必要。
+
+# 紙の教材
+
+一旦下記二冊を購入です
+* [A Guide to the Project Management Body of Knowledge (PMBOK® Guide) – Seventh Edition and The Standard for Project Management (ENGLISH)](https://www.amazon.com/Guide-Project-Management-Knowledge-PMBOK%C2%AE/dp/1628256648)
+* [PMP Exam Prep - 2023 Exam Ready. Most Accurate Agile & Predictive Content. Practice Exam Questions & Scoring. Insider Test Taking Strategies. Pass on the First Try! 11th Edition](https://www.amazon.com/dp/B0C2Y1VH1V/ref=mes-dp?_encoding=UTF8)
+
+PMBOK guide 自体は想定より薄かったです。もっと分厚い本だと思っていた。
+
+# 勉強方法
+
+* Udemy を完了させる
+* PMP Exam Prep を読みながら問題を解き、必要なところをPMBOK Guideを読んで理解を深める
+
+# その後と結果
+
+まだ受験していないので後で追記しようと思います
