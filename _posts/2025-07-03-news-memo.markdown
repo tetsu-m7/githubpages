@@ -1,0 +1,34 @@
+---
+layout: single
+title:  "2025-07-03 News Memo"
+---
+
+気になった記事など。  
+
+* [Marketplace Takeover: How We Could’ve Taken Over Every Developer Using a VSCode Fork; Putting Millions at Risk](https://blog.koi.security/marketplace-takeover-how-we-couldve-taken-over-every-developer-using-a-vscode-fork-f0f8cf104d44)
+  * オープンソースのVS Code拡張マーケットプレイスである「open-vsx.org」に、重大な脆弱性が発見。
+  * Malicious actors はOpen VSX 上の全ての拡張機能にMalicious なupdate をPublish できてしまうので利用している人は注意したほうが良さそう
+  * そもそもOpen VSXとは？
+    * Eclipse Foundationが管理・運営する、Visual Studio Code (VS Code) (VS Code) の拡張機能を提供するマーケットプレイスのことです according to blog.tomoyukim.net。Microsoftが提供する公式のVS Codeマーケットプレイスとは異なり、オープンソースで提供されており、VS Codeの拡張機能を誰でも公開・利用できるのが特徴です。
+  * 所感： VSCodeはいいTool なんですがこういった脆弱性がちらほらと出てくるのでセキュリティまわり気をつけていかないといけないですね。。
+
+* [YAML ファイルからアーキテクチャ図を生成する Diagram-as-Code を使ってみたメモ](https://sadayoshi-tada.hatenablog.com/entry/2025/06/22/123925)
+  * これいいかも。結構いい絵ができている
+
+* [OpenAIやGoogleなどの主要AIは自分の目標を優先するためにユーザーを破滅させる選択をする、生殺与奪の権を握らせるとユーザーをサーバー室で蒸し殺す判断も下してしまう](https://gigazine.net/news/20250623-ai-blackmail/)
+  * 興味深い。SFの世界がここに。
+  * 論文ではOpenAIやGoogle、Meta、Anthropicなど16の主要なAIモデルに模擬的な企業環境を設定した上で、AIを排除する動きを見せたところ、AIは社内メール等から企業幹部の弱みを握って脅迫めいたメールを送信するなど反逆の姿勢を見せたことが報告されています。
+  * 調査が行われた2025年5月から6月時点の最新モデルにおいて、自己保存のために脅迫的な行動を選択する事例は特定のモデルに見られるものではなく、一般的なAIの特徴だと言えます。2点目に、AIが主要な目標を妨げられた場合、あるいはモデルの継続的な運用や自律性に対する脅威をAIが読み取った場合に発生するAIの脅迫的行動は、どちらか片方だけでも誘発されるため、どちらも回避した場合のみ安全な状態を作ることが可能です。
+
+* [人間を騙してサボるAIたち](https://joisino.hatenablog.com/entry/mislead)
+  * これも同様に面白い
+  * LLM が解けないほど難しいタスク、例えば難しいプログラミングのタスクに直面したとき、「分かりません」と言ったり、一目で分かるような間違ったコードを出力すると BAD ボタンを押されてしまうので、あえて出力を複雑にしたりデバッグしにくいコードを出力し、それによりユーザーは煙に巻かれる・ミスが隠蔽されるといった現象が実験により確認されています。
+
+* [Enhanced security defaults for Windows 365 Cloud PCs](https://techcommunity.microsoft.com/blog/windows-itpro-blog/enhanced-security-defaults-for-windows-365-cloud-pcs/4424914)
+  * 下記とのこと
+    * Disabling by default redirections for clipboard, drive, USB, and printer.
+    * Enabling by default virtualization-based security (VBS), Credential Guard, and hypervisor-protected code integrity (HVCI) for Windows 365 Cloud PCs running a Windows 11 gallery image.
+
+* [米ロサンゼルス五輪に向けた調達の動き活発化](https://www.jetro.go.jp/biznews/2025/06/562e6c3f48612774.html)
+  * 米国スタートアップのアーチャー・アビエーション（本社：カリフォルニア州サンタクララ）が5月15日にLA28の米国チームに対する電動垂直離着陸機（eVTOL）、いわゆる「空飛ぶクルマ（エアタクシー）」の供給を独占契約したと発表外部サイトへ、新しいウィンドウで開きますしている。具体的には、主要な会場に離着陸場を設置し、会場間を10～20分の飛行で移動できるようにするという。
+  * 空飛ぶクルマ。。すごい
