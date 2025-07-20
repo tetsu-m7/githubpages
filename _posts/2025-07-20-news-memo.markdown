@@ -1,0 +1,146 @@
+---
+layout: single
+title: "セキュリティログ：2025年7月第2週"
+date: 2025-07-09
+categories: "security weekly"
+---
+
+# 2025年7月 第2週の注目セキュリティトピック
+
+セキュリティの世界は一週間でも激変します。今回も注目の脆弱性や攻撃手法、興味深いレポートをピックアップしました。個人的なコメントも添えてまとめています。
+なお、今回ChatGPTに自分が書いたInput用のメモを元にそれっぽく整形をしてもらいました。
+
+---
+
+## 2025/07/17（木）
+
+### [Pre-Auth SQL Injection to RCE - Fortinet FortiWeb Fabric Connector（CVE-2025-25257）](https://labs.watchtowr.com/pre-auth-sql-injection-to-rce-fortinet-fortiweb-fabric-connector-cve-2025-25257/)
+FortinetのFortiWeb Fabric Connectorに、認証不要でSQLインジェクションからRCEへ繋がる重大な脆弱性が報告されました。
+
+> 🔍 このWrite-up、技術の深さとデザインが非常に洗練されていて憧れます。Code レベルや、パケキャプ等のスクリーンショットもありわかりやすい。こういう記事を書けるようになりたい。
+
+---
+
+### [AIでコーディングはどれだけ早くなる？ 実は遅くなっていた…](https://www.itmedia.co.jp/aiplus/articles/2507/16/news034.html)
+米国のチームが実施した検証により、AIを使ったコーディングが逆に開発を遅延させている事例が判明。原因も5つに分けて解説されています。
+
+> 🤖 「AIすごい」だけじゃない現実が見えて興味深い。論文ベースでの分析があり根拠に基づいている。役に立っている話題しか出てこないので、反対方向の意見にも目を向けていきたいと思う
+
+---
+
+### [Brewing Trouble — macOSマルウェアキャンペーンを解析](https://medium.com/deriv-tech/brewing-trouble-dissecting-a-macos-malware-campaign-90c2c24de5dc)
+macOSを標的にしたマルウェアキャンペーンの詳細な解析記事。検索上位に現れる簡単なワードで誘導される可能性に警鐘を鳴らしています。
+
+> 🧠 Google検索で上位表示される＝安全、という思い込みは危険。
+
+---
+
+### [Cursor AIの拡張機能が仮想通貨窃盗に悪用される](https://securelist.com/open-source-package-for-cursor-ai-turned-into-a-crypto-heist/116908/)
+Cursor AI IDE向けに提供されていたVSCode拡張機能が悪用され、仮想通貨を盗む仕組みが仕込まれていたことが発覚。
+
+> ⚠️ インストール数が5万超え。VSCodeの拡張機能も信頼できるもの以外はNGの時代か。企業ではアプリインストール制限の見直しも必要になるかもしれない。
+
+---
+
+## 2025/07/15（火）
+
+### [Keylogger Data Stored in an ADS](https://isc.sans.edu/diary/rss/32108)
+NTFSのAlternate Data Stream（ADS）を悪用し、ユーザーのクリップボード情報を密かに記録する手法が紹介されています。
+
+> 一見普通のファイルに見えても、裏側にデータが潜む。目に見えない脅威に要注意。
+
+#### 例：ADSの作成コマンド
+
+
+- `test.txt`：通常のファイル  
+- `secret.txt`：test.txt内に隠されたAlternate Data Stream
+
+このストリームは、エクスプローラーや `dir` コマンドでは通常表示されません。
+
+🔗 詳細記事：[NTFS Filesystem: Alternate Data Stream (ADS)](https://infosecwriteups.com/ntfs-filesystem-alternate-data-stream-ads-c0e4a2402563)
+
+---
+
+### [2.3百万ユーザーがインストールした信頼の拡張機能がマルウェアだった](https://blog.koi.security/google-and-microsoft-trusted-them-2-3-million-users-installed-them-they-were-malware-fb4ed4f40ff5)
+
+> 最初は正当な拡張機能だったが、あとからマルウェアが仕込まれた例。ユーザーが気づくのは非常に難しい。
+
+---
+
+### [RDPを利用したラテラルムーブメント：Tiny Bitmapsの罠](https://medium.com/@mathias.fuchs/chasing-ghosts-over-rdp-lateral-movement-in-tiny-bitmaps-328d2babd8ec)
+
+> RDPを使った侵入後の横展開手法について詳細に解説。要ブックマーク。
+
+---
+
+### [KDDI総合研究所：公開FTPサーバーの歴史と終焉](https://tech-note.kddi.com/n/n9a93ac6d5051)
+
+> 昔ながらのFTP公開サーバーも時代の流れで閉鎖へ。技術の変遷を感じる。
+
+---
+
+### [参政党を支えたのはロシア製ボットによるプロパガンダだった？](https://note.com/kirik/n/n2e5c696d250f)
+
+> 日本の情報空間にもすでに深く入り込んでいる。無視できない問題。
+
+---
+
+## 2025/07/13（日）
+
+### [Opossum Attack - Opportunistic TLSによるアプリケーション層デシンク攻撃](https://opossum-attack.com/)
+
+#### 概要：
+- **正式名称**：Application Layer Desynchronization using Opportunistic TLS
+- **ターゲット**：HTTP, SMTP, FTP, POP3 など多くのプロトコル
+- **攻撃方法**：
+    - MITMがimplicit TLS接続をopportunisticに変更
+    - 暗号化開始前にリクエストを注入
+    - サーバーとクライアント間で応答のズレ（Desync）が発生
+
+#### TLSのモードの違い：
+
+- **Implicit TLS**  
+  最初から暗号化された専用ポートを使用（例：HTTPS:443）
+
+- **Opportunistic TLS（STARTTLS）**  
+  平文通信から途中でTLSに切り替え（例：SMTP:25 → STARTTLS）
+
+> 通信の前提が崩れると、TLSであっても安全とは限らない。要注意な攻撃手法です。
+
+---
+
+## 2025/07/12（土）
+
+### [Cybercrime Investigation Body of Knowledge (CIBOK)](https://www.cibok.org/ja/wp-content/themes/cibok-ja/files/CIBOK_Ver2.pdf)
+
+> 日本語で読める貴重なドキュメント。時間を取ってじっくり読みたい。
+
+---
+
+## 2025/07/06（土）
+
+### [開発にも運用にも使える「Gemini CLI」が便利すぎる](https://forest.watch.impress.co.jp/docs/serial/aistream/2028156.html)
+
+> コマンドパイプでAIに指示を渡すという操作感がとても良い。  
+> ただし、プライベートデータの取り扱いには慎重になる必要がある。
+
+---
+
+### [AIは励まされると頑張れる？松岡修造バージョンが話題](https://kaminashi-developer.hatenablog.jp/entry/2025/07/03/090000)
+
+> ユーモアたっぷりの記事。読んで元気が出る。
+
+---
+
+### [FileFix - ClickFix攻撃の新たな代替手法](https://www.mobile-hacker.com/2025/06/24/introducing-filefix-a-new-alternative-to-clickfix-attacks/)
+
+> 見えない文字列を仕込んで、ユーザーに意図しないコマンドを実行させる。最近流行のFake Captureとも類似。
+
+---
+
+### [Still X.S.S. - なぜいまだにXSSは生まれてしまうのか？](https://blog.flatt.tech/entry/still_xss)
+
+> 課題設定とCSP・WAFに関する記述が非常に良質。クライアントサイドのXSSを中心に、実効性のある対策を考えるきっかけになる。
+
+---
+
