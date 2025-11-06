@@ -1,10 +1,10 @@
 main:
+  - title: "Infra"
+    url: /
   - title: "Blog"
     url: /blogs/
   - title: "About"
     url: /about/
-  - title: "Infra"
-    url: /infra/jekyll
 
 infra:
   - title: Web
